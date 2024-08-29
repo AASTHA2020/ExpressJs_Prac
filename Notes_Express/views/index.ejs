@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+
+        <!-- Task List -->
+        <ul>
+            <% tasks.forEach(function(task, index) { %>
+                <li>
+                    <%= task %> 
+                    <!-- Delete button to remove the task -->
+                    <form action="/delete" method="POST" style="display: inline;">
+                        <input type="hidden" name="index" value="<%= index %>">
+                        <button type="submit">Delete</button>
+                    </form>
+                </li>
+            <% }); %>
+        </ul>
+
+        <!-- Add New Task Form -->
+        <form action="/add" method="POST">
+            <input type="text" name="task" placeholder="New Task" required>
+            <button type="submit">Add Task</button>
+        </form>
+    </div>
+
+    <script src="/javascripts/script.js"></script>
+</body>
+</html>
