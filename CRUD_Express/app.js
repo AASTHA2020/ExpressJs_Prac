@@ -16,12 +16,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/userdb', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
-.then(() => console.log('Connected to MongoDB'))
-.catch(err => console.error('MongoDB connection error:', err));
+mongoose.connect('mongodb://localhost:27017/mydatabase');
 
 // Routes
 app.use('/users', userRoutes);
@@ -29,7 +24,8 @@ app.use('/users', userRoutes);
 app.get('/', (req, res) => {
     res.render('index');
 });
-
-app.listen(3000, () => {
-    console.log('Server is running on port 3000');
+// Start server
+const PORT = process.env.PORT || 6969; // Ensure this is set to 6969
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
