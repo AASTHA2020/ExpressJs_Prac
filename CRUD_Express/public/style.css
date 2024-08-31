@@ -1,0 +1,93 @@
+/* General styling for body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a202c; /* zinc-900 */
+    color: #f7fafc; /* white color for text */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container styling */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #2d3748; /* Dark background for container */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Form styling */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input, button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  input {
+    background-color: #4a5568; /* Darker background for inputs */
+    color: #edf2f7; /* Light text for inputs */
+  }
+  
+  button {
+    background-color: #38b2ac; /* Teal background for buttons */
+    color: #ffffff; /* White text for buttons */
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #319795; /* Darker teal on hover */
+  }
+  
+  /* User card styling */
+  .user-card {
+    background-color: #2d3748; /* Dark background for cards */
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .user-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .user-info {
+    padding: 10px;
+  }
+  
+  .user-info h2 {
+    margin: 0;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  button {
+    background-color: #e53e3e; /* Red background for delete button */
+  }
+  
+  button:hover {
+    background-color: #c53030; /* Darker red on hover */
+  }
+  
+  a {
+    color: #63b3ed; /* Blue color for links */
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

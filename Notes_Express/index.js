@@ -25,8 +25,12 @@ app.get('/', function (req, res) {
 // Route to handle adding a new task
 app.post('/add', function (req, res) {
     const newTask = req.body.task; // Get task from request body
+    console.log('POST /add - Received new task:', newTask);
     if (newTask) {
         tasks.push(newTask); // Add new task to the list
+        console.log('POST /add - New task added:', newTask);
+    } else {
+        console.log('POST /add - No task provided.');
     }
     res.redirect('/'); // Redirect to the homepage
 });
