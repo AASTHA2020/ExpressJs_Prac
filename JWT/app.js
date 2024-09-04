@@ -48,6 +48,8 @@ app.post('/login', async (req, res) => {
   
     bcrypt.compare(req.body.password, user.password, (err, result) => { // yahan par `)` add karna tha
       if (result) {
+        let token = jwt.sign({email: user.email}, "shhhhhhh");
+        res.cookie("jwt", token);
         res.send("Yes, you can login");
       } else {
         res.send("Password did not match");
