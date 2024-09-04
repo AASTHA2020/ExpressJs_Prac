@@ -1,4 +1,12 @@
 /* General styling for body */
+
+/* src/tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
 body {
     font-family: Arial, sans-serif;
     background-color: #1a202c; /* zinc-900 */
